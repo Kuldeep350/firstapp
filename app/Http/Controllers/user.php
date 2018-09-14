@@ -90,6 +90,7 @@ class user extends Controller
                 'email'=> $request->input('email')
                 ];
         DB::table('user')->where('id','=',$id)->update($data);
+        return redirect('user'); 
 
     }
 
