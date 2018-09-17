@@ -20,7 +20,7 @@ Route::get('/home','HomeController@index')->name('home');
        
  
 Route::get('/admin','AdminController@index')->name('admin');
-
+    
 Route::prefix('admin')->group(function(){
     Route::get('login','Auth\AdminLoginController@showLoginForm')->name('admin-form');
     Route::post('login','Auth\AdminLoginController@login')->name('admin-login');
@@ -42,3 +42,7 @@ Route::prefix('admin')->group(function(){
 });
         /** CRUD routes  */
     Route::resource('user','user'); 
+    /** image upload demo*/
+
+    Route::get('image-upload','ImageController@index');
+    Route::post('image-upload','ImageController@upload');
