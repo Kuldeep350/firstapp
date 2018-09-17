@@ -31,13 +31,15 @@ class ImageController extends Controller
         $this->validate($request,[
                     'image'=>'required|image|mimes:paeg,png,jpg,gif,svg|max:2048',
         ]);
-        $imageName = time().'.'.$request->image->getClientOriginalExtension()
-        ;
+        $image = $request->file('image');
+        $input['imagename'] = time().'.'.$image->getClientOriginalExtension();
+        $destinationPath = public_path('/images');
+        $image->move($destinationPath, $input['imagename']);
 
-        $request->image->move(public_path('images'),$imageName);
 
-        return back()
-                ->with('success','Image Upload Successfully.')
-                ->with('path', $imageName);
+        $this->postImage->add($input);
+
+
+        return back()->with('success','Image Upload successful');
     }
 }
