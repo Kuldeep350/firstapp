@@ -44,5 +44,4 @@ Route::prefix('admin')->group(function(){
     Route::resource('user','user'); 
     /** image upload demo*/
 
-    Route::get('image-upload','ImageController@index');
-    Route::post('image-upload','ImageController@upload');
+   
