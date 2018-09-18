@@ -51,5 +51,9 @@ Route::prefix('admin')->group(function(){
     Route::get('/multiuploads', 'UploadController@uploadForm');
 
     Route::post('/multiuploads', 'UploadController@uploadSubmit');
+    /** view image */
+
+    Route::get('upload-image','ImageController@index');
+    Route::post('upload-image',['as'=>'image.upload','uses'=>'ImageController@uploadImages']);
 
    
