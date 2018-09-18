@@ -43,5 +43,8 @@ Route::prefix('admin')->group(function(){
         /** CRUD routes  */
     Route::resource('user','user'); 
     /** image upload demo*/
+    Route::get('file','FileController@showUploadForm')->name('upload.file');
+
+    Route::post('file','FileController@storeFile');
 
    
