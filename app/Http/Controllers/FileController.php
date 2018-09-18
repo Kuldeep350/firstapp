@@ -15,13 +15,21 @@ class FileController extends Controller
     public function storeFile(Request $request)
     {
 
+    	$this->validate($request, [
+ 
+'file' => 'required',
+ 
+
+ 
+]);
+
     	if ($request->hasFile('file')) {
 
     		$filename = $request->file->getClientOriginalName();
 
     		$filesize = $request->file->getClientSize();
 
-    		$request->file->storeAs('public/upload',$filename);
+    		$request->file->storeAs('storage/upload',$filename);
 
     		$file = new File;
 
@@ -34,6 +42,6 @@ class FileController extends Controller
 
     		return 'yes';
     	}
-    	//return $request->all();
+    	return $request->all();
     }
 }

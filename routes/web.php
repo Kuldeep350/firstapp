@@ -47,4 +47,9 @@ Route::prefix('admin')->group(function(){
 
     Route::post('file','FileController@storeFile');
 
+    /** multiple image upload*/
+    Route::get('/multiuploads', 'UploadController@uploadForm');
+
+    Route::post('/multiuploads', 'UploadController@uploadSubmit');
+
    
