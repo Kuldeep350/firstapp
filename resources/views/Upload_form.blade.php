@@ -76,7 +76,7 @@ margin-top:2%;
 
 <div class="col-md-6">
 
-<form action="/multiuploads" method="post" enctype="multipart/form-data">
+<form action="multiuploads" method="post" enctype="multipart/form-data">
 
 {{ csrf_field() }}
 

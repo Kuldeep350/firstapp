@@ -26,7 +26,7 @@ $this->validate($request, [
 
 'name' => 'required',
 
-'phpotos'=>'required',
+'photos'=>'required',
 
 ]);
 
@@ -36,7 +36,7 @@ if($request->hasFile('photos'))
 
 $allowedfileExtension=['pdf','jpg','png','docx'];
 
-$file = $request->file('photos');
+$files = $request->file('photos');
 
 foreach($files as $file){
 
@@ -59,7 +59,7 @@ foreach ($request->photos as $photo) {
 $filename
  = $photo->store('storage/photos');
 
-ItemDetails::create([
+ItemDetailS::create([
 
 'item_id' => $items->id,
 
