@@ -13,7 +13,7 @@
                 <h1 class="text-center">jQuery, Bootstrap Fileinput Example</h1><br>                
                     <div class="form-group">
                         <div class="file-loading">
-                            <input id="image-file" type="file" name="file" accept="image/*" data-min-file-count="1" multiple>
+                            <input id="image-file" type="file" name="file" accept="image/*" data-min-file-count="1" multipl>
                         </div>
                     </div>                
             </div>

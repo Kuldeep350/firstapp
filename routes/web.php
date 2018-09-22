@@ -56,4 +56,9 @@ Route::prefix('admin')->group(function(){
     Route::get('upload-image','ImageController@index');
     Route::post('upload-image',['as'=>'image.upload','uses'=>'ImageController@uploadImages']);
 
+    /**multiple image */
+
+    Route::get('image','testing@index');
+    Route::post('store','testing@store');
+
    

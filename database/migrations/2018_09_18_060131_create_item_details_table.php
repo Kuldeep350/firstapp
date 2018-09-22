@@ -22,7 +22,7 @@ class CreateItemDetailsTable extends Migration
 
             $table->string('filename');
 
-            $table->timestamps('expiry_date');
+            $table->timestamps();
         });
     }
 

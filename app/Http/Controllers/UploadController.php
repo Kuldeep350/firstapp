@@ -6,6 +6,7 @@ use App\Item;
 use App\ItemDetails;
 use Illuminate\Http\Request;
 
+
 class UploadController extends Controller
 
 {
@@ -86,5 +87,6 @@ echo '<div class="alert alert-warning"><strong>Warning!</strong> Sorry Only Uplo
 }
 
 }
+  
 
 }?>
