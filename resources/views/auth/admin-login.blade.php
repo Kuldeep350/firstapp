@@ -8,7 +8,7 @@
                 <div class="card-header">{{ __('Admin Login Form') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('admin-login') }}" aria-label="{{ __('Login') }}">
+                    <form method="POST">
                         @csrf
 
                         <div class="form-group row">

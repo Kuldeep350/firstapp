@@ -56,19 +56,19 @@ class AdminLoginController extends Controller
      * @return bool
      */
     protected function attemptLogin(Request $request)
-    {
-        
+    {   
+
         return $this->guard('admin')->attempt(
             $this->credentials($request), $request->filled('remember')
         );
     }
-    public function logout(Request $request)
+    public function logout(Request $request)    
     {
         $this->guard()->logout();
 
         //$request->session()->invalidate();
 
-        return $this->loggedOut($request) ?: redirect('/');
+         return $this->loggedOut($request) ?: redirect('/');
     }
 
 

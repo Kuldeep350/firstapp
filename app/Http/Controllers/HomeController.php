@@ -13,7 +13,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware(array('auth:web'));
+        $this->middleware(array('auth:web,admin'));
     }
 
     /**

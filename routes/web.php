@@ -61,4 +61,10 @@ Route::prefix('admin')->group(function(){
     Route::get('image','testing@index');
     Route::post('store','testing@store');
 
-   
+    Route::get('test_model1',['as'=>'test_model1', 'uses'=>'Testcontroller@test_model1']);
+    Route::get('test_model2',['as'=>'test_model2', 'uses'=>'Testcontroller@test_model2']);
+
+    /**CRUD OPRATION USING AJAX */
+
+   Route::resource('contact','ContactController');
+   Route::get('/all/contact','ContactController@Allcontact')->name('all.contact');
