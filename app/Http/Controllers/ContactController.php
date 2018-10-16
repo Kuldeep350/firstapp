@@ -53,7 +53,8 @@ class ContactController extends Controller
      */
     public function show($id)
     {
-        //
+        $contact=Contact:: find($id);
+        return $contact;
     }
 
     /**
@@ -96,7 +97,7 @@ class ContactController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Contact::destroy($id);
     }
     /**
      * READ ALL DATA JOSN FORMATE
@@ -109,7 +110,7 @@ class ContactController extends Controller
         return Datatables::of($contact)
                 ->addColumn('action', function($contact){
 
-return      ' <a onclick="showData('.$contact->id.')" class="btn btn-sm btn-success">show</a>'.''.
+return      ' <a onclick="showData('.$contact->id.')" class="btn btn-sm btn-success">show</a>'.''. 
             '<a onclick="editForm('.$contact->id.')" class="btn btn-sm btn-info">Edit</a>'.' '. 
             '<a onclick="deleteData('.$contact->id.')" class="btn btn-sm btn-danger">Delete</a>';
               

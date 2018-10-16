@@ -45,3 +45,26 @@
     </div>
   </div>
 </div>
+</div>
+
+
+<!--SIngle data show are here-->
+<div class="modal fade show-form" id="single-data" tabindex="1" role="dialog" aria-labelledby="myModalLabel">
+ <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel" align="center"></h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+ 
+      </div>
+      <div class="modal-body">
+        <ul class="list-group">
+      <li class="list-group-item">ID: <span class="text-danger" id="contactid"></span></li>
+      <li class="list-group-item">Name: <span class="text-danger" id="fullname"></span> </li>
+      <li class="list-group-item">Email: <span class="text-danger" id="contactemail"></span></li>
+      <li class="list-group-item">Phone: <span class="text-danger" id="contactnumber"></span></li>
+      <li class="list-group-item">Religion: <span class="text-danger" id="creligion"></span></li>
+    </ul>
+    </div>
+  </div>
+</div> 
