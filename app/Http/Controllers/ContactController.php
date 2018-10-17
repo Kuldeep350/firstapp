@@ -104,7 +104,7 @@ class ContactController extends Controller
      * 
      *  */
 
-    public function Allcontact()
+    public function allcontact()
     {
         $contact=Contact::all();
         return Datatables::of($contact)

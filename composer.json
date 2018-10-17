@@ -12,7 +12,8 @@
         "laravel/cashier": "^7.2",
         "laravel/framework": "5.6.*",
         "laravel/tinker": "^1.0",
-        "yajra/laravel-datatables-oracle": "~8.0"
+        "yajra/laravel-datatables-oracle": "~8.0",
+        "sukohi/surpass": "2.*"
     },
     "require-dev": {
         "filp/whoops": "^2.0",
